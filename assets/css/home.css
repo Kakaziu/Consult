@@ -1,0 +1,263 @@
+.header{
+    padding: 30px;
+    height: 95px;
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+}
+
+.title{
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.container nav ul{
+    display: flex;
+    list-style: none;
+}
+
+.link-nav{
+    margin-right: 30px;
+    font-size: 17px;
+}
+
+.link-nav a{
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+}
+
+.link-nav a::after{
+    content: ' ';
+    width: 0%;
+    height: 1.5px;
+    background-color: #D4FF2C;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.link-nav a:hover::after{
+    width: 100%;
+}
+
+.hero{
+    background-image: url('../img/hero.png');
+    width: 100%;
+    height: calc(100vh - 95px);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.overlay{
+    height:calc(100vh - 95px);
+    width: 100%;
+    background-image: linear-gradient(to right, black, rgba(0, 0, 0, 0.6));
+}
+
+.content-hero{
+    position: absolute;
+    top: 30%;
+    left: 17%;
+}
+
+.content-hero h1{
+    font-size: 45px;
+    font-weight: lighter;
+    line-height: 60px;
+    width: 50%;
+    color: white;
+}
+
+.content-hero h1 span{
+    color: #D8FF42;
+    display: block;
+}
+
+.content-hero p{
+    font-size: 23px;
+    color: #ffffff;
+    width: 55%;
+    margin-left: 5px;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-hero div{
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.content-hero div button{
+    padding: 10px 30px;
+    border-radius: 15px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 15px;
+}
+
+.btn-hero-1{
+    background-color: #D4FF2C;
+    color: black;
+    font-weight: 600;
+}
+
+.btn-hero-2{
+    background-color: black;
+    color: #D4FF2C;
+}
+
+.btn-hero-1:hover{
+    background-color: #7d9619;
+}
+
+.btn-hero-2:hover{
+    background-color: rgba(0, 0, 0, 0.747);
+}
+
+.menu-responsive-btn{
+    display: none;
+}
+
+@media (max-width: 950px){
+    .header{
+        position: fixed;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    .container{
+        display: block;
+    }
+
+    .container nav{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .menu{
+        position: absolute;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: #D8FF42;
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .link-nav{
+        color: black;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        margin-right: 0px;
+    }
+
+    .link-nav a{
+        color: black;
+    }
+
+    .link-nav a::after{
+        display: none;
+    }
+
+    .menu-responsive-btn{
+        display: block;
+        position: absolute;
+        right: 60px;
+        top: 20px;
+        font-size: 40px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-mobile{
+        height: 350px;
+        opacity: 1;
+    }
+
+    .close{
+        display: none;
+    }
+
+    .hero{
+        height: 100vh;
+    }
+
+    .overlay{
+        height: 100vh;
+    }
+}
+
+@media (max-width: 630px){
+    .content-hero{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 100%;
+    }
+
+    .content-hero h1{
+        text-align: center;
+        width: 100%;
+    }
+
+    .content-hero p{
+        text-align: center;
+        width: 80%;
+    }
+}
+
+@media (max-width: 450px){
+    .content-hero h1{
+        font-size: 32px;
+        line-height: 45px;
+    }
+
+    .content-hero p{
+        font-size: 20px;
+    }
+
+    .content-hero div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-hero div button{
+        margin-bottom: 15px;
+    }
+
+    .content-hero{
+        top: 60%;
+    }
+
+    .title{
+        font-size: 22px;
+    }
+
+    .menu-responsive-btn{
+        top: 15px;
+    }
+}

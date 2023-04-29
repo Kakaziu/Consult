@@ -1,0 +1,67 @@
+.partners{
+    margin: auto;
+    margin-top: 50px;
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.partner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    padding: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.514);
+    border-radius: 20px;
+    margin-bottom: 7%;
+}
+
+.partner h3{
+    color: black;
+}
+
+.partner img{
+    width: 200px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.itaim img{
+    width: 150px;
+}
+
+.partner button{
+    color: black;
+    background-color: #D4FF2C;
+    border: none;
+    padding: 5px 20px;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: bolder;
+}
+
+.partner button:hover{
+    background-color: #a5c522;
+}
+
+@media (max-width: 500px){
+    .partners{
+        width: 100%;
+    }
+
+    .partner{
+        width: 90%;
+    }
+}
+
+@media (max-width: 380px){
+    .partner{
+        width: 95%;
+    }
+}

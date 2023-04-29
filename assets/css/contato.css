@@ -1,0 +1,143 @@
+#contato{
+    margin-top: 7%;
+    background-color: #282727;
+    min-height: 500px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.msg-cnt{
+    font-size: 120px;
+    width: 50%;
+    display: block;
+    font-weight: bold;
+}
+
+.msg-cnt span{
+    color: white;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.form label{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.form label input, textarea{
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: 0;
+    resize: none;
+    padding: 10px 15px;
+    color: black;
+    font-size: 17px;
+}
+
+.form label input{
+    width: 100%;
+}
+
+.form label textarea{
+    height: 200px;
+}
+
+.form button{
+    margin-top: 6%;
+    width: 30%;
+    padding: 10px 0px;
+    font-size: 19px;
+    border-radius: 15px;
+    border: none;
+    color: black;
+    background-color: #D4FF2C;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form button:hover{
+    background-color: #a5c522;
+}
+
+.label-error{
+    border: 1px solid red;
+}
+
+.error-message{
+    font-size: 13px;
+    color: red;
+    margin: 10px 0px;
+}
+
+.message-success{
+    position: fixed;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background-color: green;
+    top: -20%;
+    left: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.623);
+    transition: 0.5s;
+}
+
+.message-success-show{
+    top: 5%;
+}
+
+@media (max-width: 1050px){
+    .msg-cnt{
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 900px){
+    #contato{
+        flex-direction: column;
+    }
+
+    .msg-cnt{
+        font-size: 40px;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .form{
+        width: 85%;
+    }
+}
+
+@media (max-width: 450px){
+    .msg-cnt{
+        font-size: 30px;
+    }
+
+    .form{
+        width: 95%;
+    }
+
+    .form button{
+        width: 95%;
+    }
+}
+
+
+
